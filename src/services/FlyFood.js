@@ -39,7 +39,7 @@ class FlyFood {
         for (let i = 0; i < pointsList.length; i++) {
             const point = prefix + pointsList[i];
             if (this.menorCusto !== null && this.descartaCaminhoRuim(point)) {
-                return;
+                continue;
             }
             const removido = pointsList.splice(i, 1);
             this.permutacoes(pointsList, point);
